@@ -11,7 +11,7 @@ function loadProductTable() {
             <td>${product.id}</td>
             <td>${product.name}</td>
             <td>$${product.price}</td>
-            <td><button class="delete-btn" data-id="${product.id}">Delete</button></td>
+            <td><button class="delete-btn" data-id="${product.id}" title="Delete"><i class="fa-regular fa-trash-can"></i></button></td>
         `;
         
         //Append the row to the table
