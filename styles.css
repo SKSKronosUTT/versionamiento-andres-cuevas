@@ -1,6 +1,37 @@
+:root {
+    /* Palette */
+    --butter: #ffefb3;
+    --green: #013e37;
+    --cream: #fff8dc;
+    --green-light: #07564a;
+    --butter-light: #ffd96b;
+
+    /* Theme (light) */
+    --bg: var(--butter);
+    --fg: var(--green);
+    --input-bg: var(--cream);
+    --accent: var(--green);
+    --accent-text: var(--butter);
+    --accent-hover: var(--green-light);
+    --soft-bg: var(--butter);
+    --row-hover: var(--cream);
+}
+
+body.dark {
+    /* Theme (dark) */
+    --bg: var(--green);
+    --fg: var(--butter);
+    --input-bg: transparent;
+    --accent: var(--butter);
+    --accent-text: var(--green);
+    --accent-hover: var(--butter-light);
+    --soft-bg: transparent;
+    --row-hover: var(--green-light);
+}
+
 body {
-    background: linear-gradient(#8412B0, #000);
-    font-family: 'Consolas', sans-serif;
+    background-color: var(--bg);
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -11,12 +42,11 @@ body {
 }
 
 h1 {
-    color: #FFF;
+    color: var(--fg);
     text-align: center;
     margin-top: 20px;
     font-size: 2.5em;
     display: inline;
-    text-shadow: 0 0 10px #FC199A, 0 0 20px #FC199A, 0 0 30px #FC199A, 0 0 40px #FF007F, 0 0 50px #FF007F;
 }
 
 .container {
@@ -31,16 +61,15 @@ h1 {
 
 .formContainer {
     text-align: center;
-    background-color: #FF007F;
+    border: 1px solid var(--fg);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     width: 20%;
     margin-right: 20px;
 }
 
 label {
-    color: #00FFFF;
+    color: var(--fg);
     font-size: 14px;
     margin-right: 10px;
 }
@@ -50,14 +79,16 @@ input {
     margin-right: 10px;
     margin-bottom: 15px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--fg);
+    background-color: var(--input-bg);
+    color: var(--fg);
     width: 100%;
     box-sizing: border-box;
 }
 
 button {
-    background-color: #FFCC00;
-    color: #8412B0;
+    background-color: var(--accent);
+    color: var(--accent-text);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -67,8 +98,7 @@ button {
 }
 
 button:hover {
-    background-color: #FC199A;
-    color: #fff;
+    background-color: var(--accent-hover);
 }
 
 table {
@@ -78,36 +108,73 @@ table {
 }
 
 th, td {
-    border: 1px solid #ddd;
+    border: 1px solid var(--fg);
     padding: 12px 15px;
     text-align: left;
 }
 
 th {
-    background-color: #FC199A;
-    color: white;
+    background-color: var(--accent);
+    color: var(--accent-text);
 }
 
 td {
-    background-color: #00FFFF;
-    color: #8412B0;
+    color: var(--fg);
 }
 
 .delete-btn {
-    background-color: #f0745e;
-    color: white;
-    border: none;
+    background-color: var(--soft-bg);
+    color: var(--fg);
+    border: 1px solid var(--fg);
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
+    width: auto;
 }
 
 .delete-btn:hover {
-    background-color: #ff0800;
+    background-color: var(--accent);
+    color: var(--accent-text);
+    border-color: var(--accent);
 }
 
+.theme-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid var(--fg);
+    color: var(--fg);
+    font-size: 16px;
+}
 
-#productsTable tbody tr {
-    background-color: #FFF;
-    color: #000;
+.theme-toggle:hover {
+    background-color: var(--fg);
+    color: var(--bg);
+    border-color: var(--fg);
+}
+
+#productsTable tbody tr:hover {
+    background-color: var(--row-hover);
+}
+
+footer {
+    margin-top: auto;
+    padding: 20px;
+    color: var(--fg);
+    text-align: center;
+}
+
+footer a {
+    color: var(--fg);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
