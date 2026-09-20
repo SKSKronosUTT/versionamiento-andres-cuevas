@@ -1,5 +1,36 @@
+:root {
+    /* Palette */
+    --butter: #ffefb3;
+    --green: #013e37;
+    --cream: #fff8dc;
+    --green-light: #07564a;
+    --butter-light: #ffd96b;
+
+    /* Theme (light) */
+    --bg: var(--butter);
+    --fg: var(--green);
+    --input-bg: var(--cream);
+    --accent: var(--green);
+    --accent-text: var(--butter);
+    --accent-hover: var(--green-light);
+    --soft-bg: var(--butter);
+    --row-hover: var(--cream);
+}
+
+body.dark {
+    /* Theme (dark) */
+    --bg: var(--green);
+    --fg: var(--butter);
+    --input-bg: transparent;
+    --accent: var(--butter);
+    --accent-text: var(--green);
+    --accent-hover: var(--butter-light);
+    --soft-bg: transparent;
+    --row-hover: var(--green-light);
+}
+
 body {
-    background-color: #ffefb3;
+    background-color: var(--bg);
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
@@ -11,7 +42,7 @@ body {
 }
 
 h1 {
-    color: #013e37;
+    color: var(--fg);
     text-align: center;
     margin-top: 20px;
     font-size: 2.5em;
@@ -30,7 +61,7 @@ h1 {
 
 .formContainer {
     text-align: center;
-    border: 1px solid #013e37;
+    border: 1px solid var(--fg);
     padding: 20px;
     border-radius: 8px;
     width: 20%;
@@ -38,7 +69,7 @@ h1 {
 }
 
 label {
-    color: #013e37;
+    color: var(--fg);
     font-size: 14px;
     margin-right: 10px;
 }
@@ -48,16 +79,16 @@ input {
     margin-right: 10px;
     margin-bottom: 15px;
     border-radius: 5px;
-    border: 1px solid #013e37;
-    background-color: #fff8dc;
-    color: #013e37;
+    border: 1px solid var(--fg);
+    background-color: var(--input-bg);
+    color: var(--fg);
     width: 100%;
     box-sizing: border-box;
 }
 
 button {
-    background-color: #013e37;
-    color: #ffefb3;
+    background-color: var(--accent);
+    color: var(--accent-text);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -67,7 +98,7 @@ button {
 }
 
 button:hover {
-    background-color: #07564a;
+    background-color: var(--accent-hover);
 }
 
 table {
@@ -77,24 +108,24 @@ table {
 }
 
 th, td {
-    border: 1px solid #013e37;
+    border: 1px solid var(--fg);
     padding: 12px 15px;
     text-align: left;
 }
 
 th {
-    background-color: #013e37;
-    color: #ffefb3;
+    background-color: var(--accent);
+    color: var(--accent-text);
 }
 
 td {
-    color: #013e37;
+    color: var(--fg);
 }
 
 .delete-btn {
-    background-color: #ffefb3;
-    color: #013e37;
-    border: 1px solid #013e37;
+    background-color: var(--soft-bg);
+    color: var(--fg);
+    border: 1px solid var(--fg);
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
@@ -102,23 +133,44 @@ td {
 }
 
 .delete-btn:hover {
-    background-color: #013e37;
-    color: #ffefb3;
+    background-color: var(--accent);
+    color: var(--accent-text);
+    border-color: var(--accent);
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid var(--fg);
+    color: var(--fg);
+    font-size: 16px;
+}
+
+.theme-toggle:hover {
+    background-color: var(--fg);
+    color: var(--bg);
+    border-color: var(--fg);
 }
 
 #productsTable tbody tr:hover {
-    background-color: #fff8dc;
+    background-color: var(--row-hover);
 }
 
 footer {
     margin-top: auto;
     padding: 20px;
-    color: #013e37;
+    color: var(--fg);
     text-align: center;
 }
 
 footer a {
-    color: #013e37;
+    color: var(--fg);
     font-weight: 600;
     text-decoration: none;
 }

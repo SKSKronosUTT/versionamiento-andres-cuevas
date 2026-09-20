@@ -77,3 +77,21 @@ document.getElementById('addProduct').addEventListener('click', addProduct);
 
 //Load products when the page loads
 loadProductTable();
+
+//Theme toggle (light/dark mode)
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = themeToggle.querySelector('i');
+
+function applyTheme(isDark) {
+    document.body.classList.toggle('dark', isDark);
+    themeIcon.className = isDark ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+}
+
+const savedTheme = localStorage.getItem('theme');
+applyTheme(savedTheme ? savedTheme === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+themeToggle.addEventListener('click', () => {
+    const isDark = document.body.classList.contains('dark');
+    localStorage.setItem('theme', isDark ? 'light' : 'dark');
+    applyTheme(!isDark);
+});
