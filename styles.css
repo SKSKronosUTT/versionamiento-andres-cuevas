@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(#8412B0, #000);
+    background-color: #ffefb3;
     font-family: 'Consolas', sans-serif;
     margin: 0;
     padding: 0;
@@ -11,12 +11,11 @@ body {
 }
 
 h1 {
-    color: #FFF;
+    color: #013e37;
     text-align: center;
     margin-top: 20px;
     font-size: 2.5em;
     display: inline;
-    text-shadow: 0 0 10px #FC199A, 0 0 20px #FC199A, 0 0 30px #FC199A, 0 0 40px #FF007F, 0 0 50px #FF007F;
 }
 
 .container {
@@ -31,16 +30,15 @@ h1 {
 
 .formContainer {
     text-align: center;
-    background-color: #FF007F;
+    border: 1px solid #013e37;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     width: 20%;
     margin-right: 20px;
 }
 
 label {
-    color: #00FFFF;
+    color: #013e37;
     font-size: 14px;
     margin-right: 10px;
 }
@@ -50,14 +48,16 @@ input {
     margin-right: 10px;
     margin-bottom: 15px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #013e37;
+    background-color: #fff8dc;
+    color: #013e37;
     width: 100%;
     box-sizing: border-box;
 }
 
 button {
-    background-color: #FFCC00;
-    color: #8412B0;
+    background-color: #013e37;
+    color: #ffefb3;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -67,8 +67,7 @@ button {
 }
 
 button:hover {
-    background-color: #FC199A;
-    color: #fff;
+    background-color: #07564a;
 }
 
 table {
@@ -78,36 +77,35 @@ table {
 }
 
 th, td {
-    border: 1px solid #ddd;
+    border: 1px solid #013e37;
     padding: 12px 15px;
     text-align: left;
 }
 
 th {
-    background-color: #FC199A;
-    color: white;
+    background-color: #013e37;
+    color: #ffefb3;
 }
 
 td {
-    background-color: #00FFFF;
-    color: #8412B0;
+    color: #013e37;
 }
 
 .delete-btn {
-    background-color: #f0745e;
-    color: white;
-    border: none;
+    background-color: #ffefb3;
+    color: #013e37;
+    border: 1px solid #013e37;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
+    width: auto;
 }
 
 .delete-btn:hover {
-    background-color: #ff0800;
+    background-color: #013e37;
+    color: #ffefb3;
 }
 
-
-#productsTable tbody tr {
-    background-color: #FFF;
-    color: #000;
+#productsTable tbody tr:hover {
+    background-color: #fff8dc;
 }
